@@ -20,6 +20,8 @@ function displayPeople(data){
     if (data.response === "error"){
         peopleInfo.innerHTML = `<p>Error: ${data.error}</p>`
     }else{
+        homeworld = data.homeworld;
+
         peopleInfo.innerHTML = `
         <h1>People</h1>
         <p>Name: ${data.name}</p>
@@ -30,7 +32,16 @@ function displayPeople(data){
         <p>Eye color: ${data.eye_color}</p>
         <p>Birth year: ${data.birth_year}</p>
         <p>Gender: ${data.gender}</p>
-       
+        
+        <p>Homeworld: ${homeworld.name}</p>
+        <p>Films: ${data.films}</p>
+        <p>Species: ${data.species}</p>
+        <p>Vehicles: ${data.vehicles}</p>
+        <p>Starships: ${data.starships}</p>
+        <p>Created: ${data.created}</p>
+        <p>Edited: ${data.edited}</p>
+        <p>Url: ${data.url}</p>
+
         `
     }
 }
