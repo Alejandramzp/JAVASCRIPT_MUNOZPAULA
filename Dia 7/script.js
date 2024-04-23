@@ -39,6 +39,28 @@ function displayHero(data){
 
         <h2>Biography:</h2>
         <p>Full-name: ${data.biography["full-name"]}</p>
+        <p>Alter-egos: ${data.biography["alter-egos"]}</p>
+        <p>Aliases: ${data.biography["aliases"]}</p>
+        <p>Place-of-birth: ${data.biography["place-of-birth"]}</p>
+        <p>First-appearance: ${data.biography["first-appearance"]}</p>
+        <p>Publisher: ${data.biography["publisher"]}</p>
+        <p>Alignment: ${data.biography["alignment"]}</p>
+
+        <h2>Appearance:</h2>
+        <p>Gender: ${data.appearance["gender"]}</p>
+        <p>Race: ${data.appearance["race"]}</p>
+        <p>Height: ${data.appearance["height"]}</p>
+        <p>Weight: ${data.appearance["weight"]}</p>
+        <p>Eye-color: ${data.appearance["eye-color"]}</p>
+        <p>Hair-color: ${data.appearance["hair-color"]}</p>
+
+        <h2>Work:</h2>
+        <p>Occupation: ${data.work["occupation"]}</p>
+        <p>Base: ${data.work["base"]}</p>
+
+        <h2>Connections:</h2>
+        <p>Group-affiliation: ${data.connections["group-affiliation"]}</p>
+        <p>Relatives: ${data.connections["relatives"]}</p>
         `
     }
 }
