@@ -143,11 +143,15 @@ function displayPeople(data){
             console.error('Error fetching homeworld:', error);
         });
         //------------------------------------------FILMS------------------------------------
-        fetch(data.films[0])
+        let filmsInfo = document.getElementById("films");
+        filmsInfo.innerHTML = '';         
+        
+        for (let i = 0; i <= data.films.length; i++) {
+    
+        fetch(data.films[i])
             .then(response => response.json())
             .then(filmsData =>{
-                let filmsInfo = document.getElementById("films");
-                filmsInfo.innerHTML = `
+                filmsInfo.innerHTML += `
                 <table class=" table-bordered border-danger">
                 <tr>
                     <th scope="row">Films:</th>
@@ -198,6 +202,7 @@ function displayPeople(data){
         .catch(error => {
             console.error('Error fetching films:', error);
         });
+        }
         //----------------------------------------SPECIES------------------------------------
         fetch(data.species[0])
         .then(response => response.json())
