@@ -23,6 +23,17 @@ document.getElementById("pokemonId").addEventListener("keyup", function(event) {
       fetchPokemon(pokemonId);
     }
 });
+document.getElementById("next").addEventListener("click", function() {
+    pokemonID++; 
+    fetchPokemon(pokemonID);
+});
+document.getElementById("prev").addEventListener("click", function() {
+    if (pokemonID > 1){
+        pokemonID--; 
+        fetchPokemon(pokemonID);
+    }
+});
+
 function displayPokemon(data){
 
     let pokemonInfo = document.getElementById("pokemon");
@@ -44,12 +55,4 @@ function displayPokemon(data){
     }
 
 }
-
-document.getElementById("next").addEventListener("click", function() {
-    fetchPokemon(pokemonID);
-    pokemonID++; 
-});
-document.getElementById("prev").addEventListener("click", function() {
-    fetchPokemon(pokemonID);
-    pokemonID--; 
-});
+fetchPokemon(pokemonID);
