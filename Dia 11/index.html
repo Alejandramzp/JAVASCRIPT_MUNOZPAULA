@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css"> 
-    <title>API POKEMON</title>
-
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="storage/pokeball.png" type="image/x-icon">
 </head>
 <body>
-    <div class="pokedex">
-        <img src="storage/pokedex.png" alt="pokedex">
+    <img src="storage/pokedex.png">
+    <div id="pokeGif"></div>
+    <div id="pokemon"></div>
+    <input type="text" id="pokemonId" placeholder="Name or Number" onkeyup="fetchPokemon()">
+    <div class="botones">
+        <button id="prev">Prev < </button>
+        <button id="next">Next > </button>
     </div>
+    
 </body>
-<script src="./script.js"></script>
+<script src="js/script.js"></script>
 </html>
