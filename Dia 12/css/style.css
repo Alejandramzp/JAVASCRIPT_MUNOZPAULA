@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 html{
-    background-image: url(../storage/fondo.jpg);
+    background-color: #330259;
+    border: double 1.5vi #ffffff;
     display: flex;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -15,24 +18,33 @@ html{
     background-attachment: fixed;
 }
 h1{
-    font-family: "Sedgwick Ave Display", cursive;
+    position: absolute;
+    top: 3vi;
+    left: 32vi;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
     font-size: 5vi;
+    color: #ffffff;
 }
 button{
-    position: relative;
-    background-color:#570480;
-    color: #ffffff;
+    position: absolute;
+    background-color:#ffffff;
+    color: #330259;
     font-size: 1.5vi;
     font-weight: 700;
-    width: 15vi;
-    height: 4vi;
-    top: 3vi;
-    right: 1vi;
+    bottom: 2vi;
+    left: 2vi;
+    width: 10.5vi;
+    height: 4.5vi;
     border-radius: 0.3vi;
-    border: solid 0.15vi #2a2a2a;
-    box-shadow: -0.2vi 0.4vi #330259;
+    border: solid 0.15vi #330259;
+    box-shadow: -0.2vi 0.4vi #7a1dc2;
     margin: 0.8vi;
 }
 button:active{
     box-shadow: inset -0.2vi 0.4vi #330259;
+}
+img{
+    margin: 0.4vi;
+    width: 10vi;
 }

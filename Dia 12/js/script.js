@@ -1,13 +1,13 @@
 function fetchCards(){
     let xhr = new XMLHttpRequest();
-    let url = `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=5`; //Barajar las cartas definiendo la cantidad de cartas a usar
+    let url = `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=8`; //Barajar las cartas definiendo la cantidad de cartas a usar
     xhr.open('Get',url,true);
     xhr.onreadystatechange = function(){
         if (this.readyState === 4 && this.status === 200){
             let response = JSON.parse(this.responseText);
             console.log(response);
             let xhr = new XMLHttpRequest();
-            let url = `https://deckofcardsapi.com/api/deck/${response.deck_id}/draw/?count=5`; //se entra con el ID para que muestre las cartas 
+            let url = `https://deckofcardsapi.com/api/deck/${response.deck_id}/draw/?count=8`; //se entra con el ID para que muestre las cartas 
             xhr.open('Get',url,true);
             xhr.onreadystatechange = function(){
                 if (this.readyState === 4 && this.status === 200){
@@ -37,7 +37,6 @@ function displayCards(card){
     let CardElement = document.createElement("img");
     CardElement.src = card.image;//ruta para buscar la imagen de la carta
     containerCard.appendChild(CardElement);
-    //containerCard.innerHTML = '';
 }
 document.getElementById("buttonFetch").addEventListener("click", fetchCards);
 
