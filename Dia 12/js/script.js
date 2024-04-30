@@ -16,6 +16,7 @@ function fetchCards(){
                     let cardsDupli = JSON.parse(JSON.stringify(response.cards)); //JSON.stringify(response.cards): convierte el array de cartas(response.cards) en una cadena JSON
                     //JSON.parse(): convierte la cadena JSON en un array de js(nueva instancia del array con sus elementos independiente del array principal)---  let cardsDupli: contiene la copia exacta del array completamente independiente
                     response.cards = response.cards.concat(cardsDupli); //se concatena el array(cardsDupli) con el array principal(response.cards) esto crea un nuevo array que contiene todos los elementos (principales y los duplicados) y los añade al array principal
+                    containerCard.innerHTML = '';
                     for (let i = 0; i < response.cards.length; i++) {
                         displayCards(response.cards[i]); //se da la ruta para que ingrese a las caracteristicas de la carta 
                     }
