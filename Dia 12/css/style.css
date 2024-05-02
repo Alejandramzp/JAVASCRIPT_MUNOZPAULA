@@ -3,8 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.4s ease;
 }
-html{
+body{
+    perspective:1000;
     background-color: #330259;
     border: double 1.5vi #ffffff;
     display: flex;
@@ -46,5 +48,67 @@ button:active{
 }
 img{
     margin: 0.4vi;
-    width: 10vi;
+    width: 8vi;
+    height: 12vi;
+}
+#containerCard{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 10vi;
+    left: 0vi;
+}
+.cartaCont{
+    position: relative;
+    width: 8vi;
+    height: 12vi;
+    transform-style: preserve-3d;
+    margin: 0.5vi;
+    transform-origin: center;
+    cursor: pointer;
+}
+.cartaCont.girar .atras{
+    transform: rotateY(-180deg);
+    transition: transform 0.4s ease;
+}
+.cartaCont.girar .frente{
+    transform: rotateY(0deg);
+    transition: transform 0.4s ease;
+    
+}
+.frente, .atras{
+    position: absolute;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+.frente{
+   transform: rotateY(180deg);
+   transition: transform 0.5s;
+   animation: girarFrente 8s;
+}
+.atras{
+    animation: girarAtras 8s;
+}
+@keyframes girarFrente{
+    100%{
+        transform: rotateY(180deg);
+    }
+    0%{
+        transform:rotateY(0deg);
+    }
+}
+@keyframes girarAtras{
+    100%{
+        transform: rotateY(0deg);
+    }
+    0%{
+        transform:rotateY(180deg);
+    }
+}
+.frente.seleccionada {
+    /* Estilos adicionales para cartas seleccionadas */
+    border: 2px solid yellow;
+    box-shadow: 0 0 5px yellow;
 }
