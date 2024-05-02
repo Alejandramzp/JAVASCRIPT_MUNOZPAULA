@@ -108,7 +108,22 @@ img{
     }
 }
 .frente.seleccionada {
-    /* Estilos adicionales para cartas seleccionadas */
     border: 2px solid yellow;
     box-shadow: 0 0 5px yellow;
+}
+.cartaCont.seleccionada .frente {
+    transform: rotateY(0deg);
+}
+
+.cartaCont.seleccionada .atras {
+    transform: rotateY(180deg);
+}
+.girar .atras {
+    transform: rotateY(-180deg);
+    transition: transform 0.4s ease;
+}
+
+.girar .frente {
+    transform: rotateY(0deg);
+    transition: transform 0.4s ease;
 }

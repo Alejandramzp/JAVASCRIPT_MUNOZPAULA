@@ -27,7 +27,6 @@ function fetchCards(){
     };
     xhr.send();
 }
-
 function displayCards(card){
     let containerCard= document.getElementById("containerCard");
     let cardCont = document.createElement("div");
@@ -75,14 +74,20 @@ function compararCartas() {
             console.log("Carta 2 seleccionada:", card2);
             card1.classList.add("seleccionada");
             card2.classList.add("seleccionada");
+            card1.classList.add("pareja");
+            card2.classList.add("pareja");
         } else {
             console.log("Las cartas no son parejas, volteando...");
             // Si las cartas no son pareja, las volteamos
             let card1 = document.querySelector(`[data-id="${codigo1}"]`);
             let card2 = document.querySelector(`[data-id="${codigo2}"]`);
             setTimeout(() => {
-                card1.parentElement.classList.remove("girar");
-                card2.parentElement.classList.remove("girar");
+                if (!card1.classList.contains("pareja")) {
+                    card1.parentElement.classList.remove("girar");
+                }
+                if (!card2.classList.contains("pareja")) {
+                    card2.parentElement.classList.remove("girar");
+                }
             }, 1000);
         }
         
