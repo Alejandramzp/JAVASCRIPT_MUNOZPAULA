@@ -16,39 +16,60 @@
             <tbody>
                 <td>
                     <h5>Gestion de Heroes</h5>
-                    <div class="mb-3">
-                        <label for="nombrePer" class="form-label">Nombre Personaje</label>
-                        <input type="text" class="form-control" id="nombrePer" aria-describedby="emailHelp">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="nombrePer" class="form-label">Nombre Personaje</label>
+                                <input type="text" class="form-control" id="nombrePer" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="nombreAct" class="form-label">Nombre Actor</label>
+                                <input type="text" class="form-control" id="nombreAct" aria-describedby="emailHelp">
+                            </div>
+                        </div>
                     </div>
-                <div class="mb-3">
-                    <label for="nombreAct" class="form-label">Nombre Actor</label>
-                    <input type="text" class="form-control" id="nombreAct" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="edad" class="form-label">Edad Actor</label>
-                    <input type="text" class="form-control" id="edad" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="ubicacion" class="form-label">Ubicacion</label>
-                    <input type="text" class="form-control" id="ubicacion" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">Nombre de la ciudad de origen</div>
-                </div>
-                <div class="mb-3">
-                    <label for="poster" class="form-label">Poster</label>
-                    <input type="text" class="form-control" id="poster" aria-describedby="emailHelp">
-                </div>
-                <div class="col">
-                    <div class="mb-3">
-                        <label for="fecha" class="form-label">Fecha</label>
-                        <input type="date" class="form-control" name="dateAppears" id="fecha">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="edad" class="form-label">Edad Actor</label>
+                                <input type="text" class="form-control" id="edad" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="ubicacion" class="form-label">Ubicacion</label>
+                                <input type="text" class="form-control" id="ubicacion" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">Nombre de la ciudad de origen</div>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="poster" class="form-label">Poster</label>
+                                <input type="text" class="form-control" id="poster" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" name="dateAppears" id="fecha">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <label for="productora" class="form-label">Productora</label>
-                <select class="form-select" aria-label="Default select example" id="productora">
-                    <option selected></option>
-                    <option value="1">Marvel</option>
-                    <option value="2">DComics</option>
-                </select>
+                    <div class="row">
+                        <div class="col">
+                            <label for="productora" class="form-label">Productora</label>
+                            <select class="form-select" aria-label="Default select example" id="productora">
+                                <option selected></option>
+                                <option value="1">Marvel</option>
+                                <option value="2">DComics</option>
+                                
+                            </select>
+                        </div>
+                    </div>
                 <br>
                 <table class="table border border-dark-subtle">
                     <thead class="table-light">
@@ -56,9 +77,12 @@
                     </thead>
                     <tbody>
                         <td>
-                            <h6 class="link-primary">Trajes del Personaje</h6>
+                            <h5 class="link-primary">Trajes del Personaje</h5>
                             <p class="link-primary">En esta sección podra registrar los nombres de los trajes usados por el actor en cada una de las peliculas.</p>
-                            <button type="button" class="btn btn-warning">+</button>
+                            <a class="btn btn-warning" href="#" id="addSuite">+</a>
+                            <div class="" style="width: 100%;">
+                                <div class="container body-detail"></div>
+                            </div>
                         </td>
                     </tbody>
                 </table>
