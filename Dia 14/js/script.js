@@ -60,8 +60,13 @@ function cancelar(){
     for(var i = 0; i < fields.length; i++){
         fields[i].disabled = true;
     }
-    let regisTrajesCan = document.getElementById("grpSuites");
-    regisTrajesCan.disabled = true;
+    
+    let regisTrajesCan = document.getElementById("grpSuites");// Limpiar la información mostrada en el div de trajes
+    regisTrajesCan.innerHTML = "";
+
+    let mostarCan = document.getElementById("mostarInfo");// Limpiar la información mostrada en el div de trajes
+    mostarCan.innerHTML = "";
+
 }
 
 function mostrar(){
