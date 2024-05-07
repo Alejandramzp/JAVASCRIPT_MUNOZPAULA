@@ -64,7 +64,7 @@ function cancelar(){
     let regisTrajesCan = document.getElementById("grpSuites");// Limpiar la información mostrada en el div de trajes
     regisTrajesCan.innerHTML = "";
 
-    let mostarCan = document.getElementById("mostarInfo");// Limpiar la información mostrada en el div de trajes
+    let mostarCan = document.getElementById("mostarInfo");// Limpiar la información mostrada en el div de informacion de Heroe
     mostarCan.innerHTML = "";
 
 }
@@ -95,5 +95,54 @@ function mostrar(){
         `;
     } else {
         alert("No hay información guardada.");
+    }
+}
+
+function eliminar() {
+    localStorage.removeItem("informacion");
+    alert("Se ha eliminado la informacion");
+
+    let mostarCan = document.getElementById("mostarInfo");// Limpiar la información mostrada en el div de informacion de Heroe
+    mostarCan.innerHTML = "";
+}
+
+function actualizar() {
+    let nombre = document.getElementById("nombrePer").value; // Obtener los valores del formulario
+    let nombreActor = document.getElementById("nombreAct").value;
+    let edad = document.getElementById("edad").value;
+    let ubicacion = document.getElementById("ubicacion").value;
+    let poster = document.getElementById("poster").value;
+    let fecha = document.getElementById("fecha").value;
+    let productora = document.getElementById("productora").value;
+
+    let info = {    
+        nombre: nombre,
+        nombre_actor : nombreActor,
+        edad : edad,
+        ubicacion : ubicacion,
+        poster : poster,
+        fecha : fecha,
+        productora : productora
+    };
+
+    let informacionJSON = JSON.stringify(info); // Convertir el objeto a JSON
+
+    let infoGuardada = localStorage.getItem("informacion");// Verificar si hay información guardada en el almacenamiento local
+    if (infoGuardada){
+        let infoAnterior = JSON.parse(infoGuardada);
+        Object.keys(info).forEach(key => {
+            infoAnterior[key] = info[key];
+        });
+        informacionJSON = JSON.stringify(infoAnterior);
+    }else{
+        alert("No hay información guardada para actualizar.");
+        return;
+    }
+    localStorage.setItem("infromacion",informacionJSON);// Guardar la información actualizada en el almacenamiento local
+    alert("Información actualizada correctamente.");
+
+    let fields = document.getElementById("frmDataHero").getElementsByTagName('*');
+    for(var i = 0; i < fields.length; i++){
+        fields[i].disabled = false;
     }
 }
