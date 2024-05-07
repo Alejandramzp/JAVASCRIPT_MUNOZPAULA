@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    display: flex;
+    justify-content: center;
+}
+img{
+    position: relative;
+    top: 1vi;
+    left: 45vi;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 2vi;
+}
