@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #6A0F49;
+}
+#pic{
+    background-color: #C5C3C6;
+    border-radius: 1.5vi 1.5vi 0 0;
+    display: flex;
+    justify-content: center;
+    height: 12vi;
+}
+img{
+    position: absolute;
+    top: 5vi;
+    width: 10vi;
+    border-radius: 60%;
+    border:black solid;
+    border: #C3C3C3 0.2vi solid;
+}
+button{
+    background-color: transparent;
+    border: transparent solid;
+    width:3vi;
+    margin: 1.5vi;
+}
+button:hover{
+    transform: translateY(-1vi);
+    border-radius: 1vi;
+    border-color: #6A0F49;
+}
+#contenedor{
+    border: #C3C3C3 0.2vi solid;
+    border-radius: 2vi;
+    background-color: #F8F8F8;
+    position: relative;
+    top: 8vi;
+    width: 50vi;
+    height: 35vi;
+}
+#info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14vi;
+    color: #ABA8B2;
+    font-size: 1.5vi;
+}
+h1{
+    color: black;
+    font-size: 3vi;
+}
