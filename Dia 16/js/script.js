@@ -78,7 +78,7 @@ function displayPassword(){
     let password = document.getElementById("info");
     password.innerHTML = `
         <div>
-        <h4>My phone number is</h4>
+        <h4>My password is</h4>
         <h1>${ruta.login.password}</h1>
         </div>
     `;
