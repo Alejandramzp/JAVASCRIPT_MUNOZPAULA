@@ -30,7 +30,7 @@ img{
 button{
     background-color: transparent;
     border: transparent solid;
-    width:3vi;
+    width:3.5vi;
     margin: 1.5vi;
 }
 button:hover{
@@ -53,10 +53,10 @@ button:hover{
     justify-content: center;
     align-items: center;
     height: 14vi;
-    color: #7EC4CF;
+    color: #a3a5a6;
     font-size: 1.3vi;
 }
 h1{
-    color: #bc9ca5;
+    color: #7EC4CF;
     font-size: 2.6vi;
 }
